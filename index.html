@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<Html>
+    <head>
+        <title>Lab 10 lab</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{title}}</h1>
+            <!--Input fields from firstName and lastName-->
+            <input type="text" v-model=" firstName" placeholder="Enter first name: ">
+            <input type="text" v-model=" lastName" placeholder="Enter last name: ">
+
+            <!--Displaying full name-->
+            <p>Full name: {{fullName}}</p>
+
+            <!--Input field for quantity (min val = 0)-->
+            <input type="number" id="quantity" v-model="quantity" min="0">
+
+            <!--Displaying price/item and total price-->
+            <p>Price per item: $ {{pricePerItem}}</p>
+            <p>Total price: $ {{totalPrice}}</p>
+
+            <!--Button to clear fields-->
+            <button @click="clearFields">Clear Fields</button>
+        </div>
+        <!--Adding Vue.js from CDN-->
+        <script src="https://unpkg.com/vue@3.4.31/dist/vue.global.js"></script>
+        <!--Adding JS-->
+        <script src="scripts/app.js"></script>
+    </body>
+</Html>
